@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--xml declaration-->
+
+<!--This XML document contains the data and information on Morning Space Music Store-->
+<!--
+    Author: Kiran Khadka (19033683)
+    Date: April 29, 2021
+
+    File name: catalog_19033683.xml
+    Supporting Files: catalog_19033683.dtd | catalog_19033683.xsd | catalog_19033683.css
+
+    Guides: 1) Validate XML document against dtd and schema individually.
+            2) To validate this XML doc against dtd file, comment out or remove schema processing instructions.
+            3) To validate this XML doc against schema file, comment out or remove the Doctype declaration of 
+               external subset of dtd.
+            4) For the futher convenience, declaration of root element, <musicStore> is attached in comment 
+               after the schema processing instructions.  
+            5) There is no need in adding any element declaration in this catalog_19033683.xml file.
+            6) For further documentation, follow the comments, where necessary. 
+
+-->
+
+
+<!DOCTYPE musicStore SYSTEM "catalog_19033683.dtd">
+<!--doctype declaration for external subset of dtd-->
+
+
+<?xml-stylesheet type="text/css" href="catalog_19033683.css"?><!--processing instructions for css-->
+
+<!--schema declaration and linking-->
+<musicStore xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="catalog_19033683.xsd">
+
+
+    <!--<musicStore>-->
+    <!-- Uncomment above line root element declaration when needed to validate against dtd.
+     There is no need to define element
+-->
+
+    <!--Information of the store begins-->
+    <storeInfo>
+        <storeName>Morning Space Music Store</storeName>
+        <storeAddress>Ekantakuna-11, Lalitpur</storeAddress>
+        <storeContact contactType="primary">01-239023</storeContact>
+        <storeContact contactType="secondary">01-239023</storeContact>
+        <storeWebsite>www.morningspacemusic.com</storeWebsite>
+        <storeLogo></storeLogo>
+    </storeInfo>
+    <!--Information of the store finished-->
+
+
+
+    <!--Information of songs begins-->
+    <songInfo>
+        <!--Data 1-->
+        <song songID="SO11">
+            <imageCover coverID="HB1"></imageCover>
+            <songName>Song: Hataarindai, Bataasindai</songName>
+            <singer type="single">Vocal: Sajjan Raj Vaidya </singer>
+            <price range="low"> Price: NRs. 200</price>
+            <rating>MorningSpace Rating: 4.6/5</rating>
+            <songDescription>
+                <genre>Genre: Nepali Music</genre>
+                <writer>Written by: Sajjan Raj Vaidya</writer>
+                <director>Directed by: Nurbu Lama</director>
+                <producer>Produced by: Sajjan Raj Vaidya</producer>
+                <releaseDate>Release Date: 
+                    <year>Year: 2019 </year>
+                    <month>Month: Jan </month>
+                    <day> Day: 02 </day>
+                </releaseDate>
+                <duration>Duration: 5:41 </duration>
+                <songSummary>
+                        After a year of great success of Chhithi Bhitra, this 
+                        song is expression of the hearts full of unconditional 
+                        love &amp; faith.
+                </songSummary>
+            </songDescription>
+        </song>
+
+        <!--Data 2-->
+        <song songID="SO12">
+            <imageCover coverID="KCH2"></imageCover>
+            <songName>Song: K Chha Hajur</songName>
+            <singer>Singers: Sachin Pariyar, Asmita Adhikari, Bikram Chhetri </singer>
+            <price range="low"> Price: NRs. 200</price>
+            <rating>MorningSpace Rating: 4.1/5</rating>
+            <songDescription>
+                <genre>Genre: Nepali Music</genre>
+                <writer>Written by: Netra Aryal</writer>
+                <director>Directed by: Kajish Shrestha</director>
+                <producer>Produced by: </producer>
+                <releaseDate>Release Date: 
+                    <year>Year: 2021 </year>
+                    <month>Month: Feb </month>
+                    <day> Day: 02 </day>
+                </releaseDate>
+                <duration>Duration: 9:37 </duration>
+                <songSummary>
+                        K Chha Hajur is a new latest Nepali Lok Dohori 
+                        song from viral boy Sachin Pariyar
+                </songSummary>
+            </songDescription>
+        </song>
+
+
+        <!--Data 3-->
+        <song songID="SO13">
+            <imageCover coverID="SMLU3"></imageCover>
+            <songName>Song: Sunday Morning Love You </songName>
+            <singer type="single">Vocal: Bhim Niroula </singer>
+            <price range="low">NRs. 100</price>
+            <rating>MorningSpace Rating: 3.5/5</rating>
+            <songDescription>
+                <genre>Genre:Pop </genre>
+                <album>Album: Sunday Morning Love You </album>
+                <writer>Written by: Bhim Niroula</writer>
+                <director>Directed by: Bhim Niroula</director>
+                <producer>Produced by:Bhim Niroula</producer>
+                <releaseDate>Release Date: 
+                    <year>Year: 2013 </year>
+                    <month>Month: Oct </month>
+                    <day>Day: 12 </day>
+                </releaseDate>
+                <duration>Duration: 4:45 </duration>
+                <songSummary>
+                        Bhim Niroula, is an UK based Nepali singer. 
+                        The song is written &amp; performed by him for his partner. 
+                </songSummary>
+            </songDescription>
+        </song>
+
+
+
+        <!--Data 4-->
+        <song songID="SO14">
+            <imageCover coverID="SB4"></imageCover>
+            <songName>Song: Sangai Bachauna </songName>
+            <singer>Vocal: Sareen Deoja </singer>
+            <price range="low">Price: NRs. 200</price>
+            <rating>MorningSpace Rating: 4/5</rating>
+            <songDescription>
+                <genre>Genre: Rock Music</genre>
+                <album>Album: Monkey Temple </album>
+                <band> Band: The Monkey Temple </band>                <!--band is an optional element-->
+                <writer>Written by: Sareen Deoja</writer>
+                <director>Directed by: Manish Adhikari</director>
+                <producer>Produced by: Red Circle</producer>
+                <recordist>Recorded by: Bishal Rai </recordist>
+                <releaseDate>Release Date:
+                    <year>Year: 2017</year>
+                    <month>Month: Dec </month>
+                    <day>Day: 27 </day>
+                </releaseDate>
+                <duration>Duration: 5:04</duration>
+                <songSummary>
+                    Since 1998, the Nepali rocking band has hilarious performance 
+                    over the decades. This song dwells on love and relationship with melodious music. 
+                </songSummary>
+            </songDescription>
+        </song>
+
+
+        <!--Data 5-->
+        <song songID="SO15">
+            <imageCover coverID="SKM5"></imageCover>
+            <songName>Song: Samhalincha Kahile Man</songName>
+            <singer type="single">Vocal: Sugam Pokhrel </singer>
+            <price range="low">Price: NRs. 150</price>
+            <rating>MorningSpace Rating: 4.5/5</rating>
+            <songDescription>
+                <genre>Genre: Pop Music</genre>
+                <album>Album: Sugam Yatra </album>
+                <writer>Written by: Suyash Bhattarai  </writer>
+                <director>Directed by: Uday Sijapati</director>
+                <producer>Produced by: Music.com </producer>
+                <releaseDate>Release Date:
+                    <year>Year: 2012 </year>
+                    <month>Month: Mar </month>
+                    <day>Day: 02 </day>
+                </releaseDate>
+                <duration>Duration: 3:56</duration>
+                <songSummary>
+                    Evergreen hits of Nepali Pop Singer Sugam Pokhrel, 
+                    this song is pure expression of harmonious melodies 
+                    in one&apos; life. 
+                </songSummary>
+            </songDescription>
+        </song>
+
+
+        <!--Data 6-->
+        <song songID="SO16">
+            <imageCover coverID="M6"></imageCover>
+            <songName>Song: Maili</songName>
+            <singer>Vocal: Dilli Phombo </singer>
+            <price range="high">Price: NRs. 150</price>
+            <rating>MorningSpace Rating: 4.5/5</rating>
+            <songDescription>
+                <genre>Genre: Pop Music</genre>
+                <album>Album: Maili</album>
+                <band>Band: The Outsiders </band>                <!--optional elements-->
+                <writer>Written by: Subigya Sunder Shrestha  </writer>
+                <director>Directed by: Subigya Sunder Shrestha</director>
+                <producer>Produced by: Rishab Karki</producer>
+                <releaseDate>Release Date: 
+                    <year>Year: 2012</year>
+                    <month>Month: Mar </month>
+                    <day>Day: 02 </day>
+                </releaseDate>
+                <duration>Duration: 3:56</duration>
+                <songSummary>
+                        Maili is a melodious pop song by the famous band of Nepal: 
+                        The Outsider&apos; Band.
+                </songSummary>
+            </songDescription>
+        </song>
+
+        <!--Data 7-->
+        <song songID="17">
+            <imageCover coverID="TMA7"></imageCover>
+            <songName>Song: Take Me to the Alley</songName>
+            <singer>Vocal: Gregory Porter</singer>
+            <price range="low">Price: NRs. 150</price>
+            <rating>MorningSpace Rating: 4/5</rating>
+            <songDescription>
+                <genre>Genre: Jazz Music</genre>
+                <album>Album: Take Me to the Alley</album>
+                <writer>Written by: Gregory Porter</writer>
+                <director>Directed by: Gregory Porter </director>
+                <producer>Produced by: Gregory Porter, Kamau Kenyatta</producer>
+                <label>Label: Blue Note </label>
+                <releaseDate>Release Date: 
+                    <year>Year: 2016 </year>
+                    <month>Month: May </month>
+                    <day>Day: 06 </day>
+                </releaseDate>
+                <duration>Duration: 51:18</duration>
+                <songSummary>
+                     A greatest trak by Gregory Porter, for which he was awarded with Grammy Award, 2017.
+                </songSummary>
+            </songDescription>
+        </song>
+
+        <!--Data 8-->
+        <song songID="SO18">
+            <imageCover coverID="MTMG8"></imageCover>
+            <songName>Song: Ma Timilai Maya Garchu</songName>
+            <singer>Vocal: Udit Narayan Jha &#38; Sadhana Sargam </singer>
+            <price range="low">Price: NRs. 120</price>
+            <rating>MorningSpace Rating: 4.5/5</rating>
+            <songDescription>
+                <genre>Genre: Nepali Modern Song  </genre>
+                <album>Album: Angarakshak Movie Collection  </album>
+                <writer>Written by:Nirmal Sharma </writer>
+                <director>Directed by: Dayaram Dahal </director>
+                <producer>Produced by: Madhav Lal Shrestha </producer>
+                <releaseDate>Release Date:
+                    <year>Year:  2012 </year>
+                    <month>Month: Mar</month>
+                    <day>Day: 02 </day>
+                </releaseDate>
+                <duration>Duration: 3:56</duration>
+                <songSummary>
+                 Ma timilai maya garchu is beautiful song from the Nepali Movie, Angarakshak.
+                </songSummary>
+            </songDescription>
+        </song>
+
+
+
+        <!--Data 19-->
+        <song songID="SO19">
+            <imageCover coverID="MPAK9"></imageCover>
+            <songName>Song: Mero Pauma Aaja Kohi</songName>
+            <singer>Vocal: Gopan Yonjan &amp; Meera Rana</singer>
+            <price range="high">Price: NRs. 200</price>
+            <rating>MorningSpace Rating: 4.8/5</rating>
+            <songDescription>
+                <genre>Genre: Classical Music </genre>
+                <writer>Written by: Gopal Yonjan</writer>
+                <director>Directed by: Gopal Yonjan</director>
+                <producer>Produced by: Gopal Yonjan</producer>
+                <releaseDate>Release Date:
+                    <year>Year: 2001 </year>
+                </releaseDate>
+                <duration>Duration: 3:25</duration>
+                <songSummary>
+                    Mero Pauma Aaja Kohi is famous classical music song by Gopal Yonjan. The song and its composition is still fresh in these days.
+                </songSummary>
+            </songDescription>
+        </song>
+
+        <!--Data 20-->
+        <song songID="SO20">
+            <imageCover coverID="JPS10"></imageCover>
+            <songName>Song: Jail Pani Sahula</songName>
+            <singer>Vocal: Melina Rai &amp; Bal Bahadur Rajbanshi</singer>
+            <price range="high">Price: NRs. 200</price>
+            <rating>MorningSpace Rating: 4.6/5</rating>
+            <songDescription>
+                <genre>Genre: Nepali Folk </genre>
+                <album>Album: Jail Pani Sahula </album>
+                <writer>Written by: Rohan Paudel "Janak"</writer>
+                <director>Directed by: Hari Lamsal</director>
+                <producer>Produced by: Acoustic Studio </producer>
+                <releaseDate>Release Date:
+                    <year>Year: 2020</year>
+                    <month>Month: Mar </month>
+                    <day>Day: 19 </day>
+                </releaseDate>
+                <duration>Duration: 5:20</duration>
+                <songSummary>
+                 Jail Pani Sahula is a melodious nepali song which is centred around the love affairs and relationship.
+                </songSummary>
+            </songDescription>
+        </song>
+
+
+        <!--Data 11-->
+        <song songID="SO21">
+            <imageCover coverID="C11"></imageCover>
+            <songName>Song: Crush </songName>
+            <singer type="single">Vocal: David Archuleta</singer>
+            <price range="high">Price: NRs. 200</price>
+            <rating>MorningSpace Rating: 4.6/5</rating>
+            <songDescription>
+                <genre>Genre: Pop </genre>
+                <genre>Genre: R&amp;B </genre>
+                <album>Album: David Archuleta </album>
+                <writer>Written by: Jess Cates </writer>
+                <writer>Co-written by: David Hodges, Emanuel Kiriakou </writer>
+                <director>Directed by: Hari Lamsal</director>
+                <producer>Produced by: Emanuel Kiriakou </producer>
+                <label>Label: Jive </label>
+                <version>Version: Acapella Version </version>
+                <releaseDate>Release Date:
+                    <year>Year: 2008</year>
+                    <month>Month:Aug</month>
+                    <day>Day: 12</day>
+                </releaseDate>
+                <duration>Duration: 3:31</duration>
+                <songSummary> 
+                  Crush is single debut by American singer David Archuletta. It was commercially hit and melodious song. 
+                </songSummary>
+            </songDescription>
+        </song>
+
+
+        <!--Data 12-->
+        <song songID="SO22">
+            <imageCover coverID="RW12"></imageCover>
+            <songName>Song: Remember When </songName>
+            <singer>Vocal: Alan Jackson</singer>
+            <price range="mid">Price: NRs. 200</price>
+            <rating>MorningSpace Rating: 4.4/5</rating>
+            <songDescription>
+                <genre>Genre: Country Music</genre>
+                <genre>Genre: Country Pop </genre>
+                <album>Album: Greatest Hits Volume</album>
+                <writer>Written by: Alan Jackson</writer>
+                <director>Directed by: Hari Lamsal</director>
+                <producer>Produced by: Keith Stegall </producer>
+                <label>Label: Arista Nashville </label>
+                <releaseDate>Release Date:
+                    <year>Year: 2003</year>
+                    <month>Month: Oct</month>
+                    <day>Day: 27</day>
+                </releaseDate>
+                <duration>Duration: 4:30</duration>
+                <songSummary>  
+                   Alan Jackson portrays his life with his wife on this country music, Remember When.
+                </songSummary>
+            </songDescription>
+        </song>
+
+       <!--Data 13-->
+        <song songID="SO23">
+            <imageCover coverID="ASKS13"></imageCover>
+            <songName>Song: A Sky Full of Stars</songName>
+            <singer>Vocal: Coldplay </singer>
+            <price range="high">Price: NRs. 150</price>
+            <rating>MorningSpace Rating: 4.5/5</rating>
+            <songDescription>
+                <genre>Genre: Electronic Dance Music (EDM)</genre>
+                <album>Album: Ghost Stories</album>
+                <band>Band: Coldplay</band>                <!--optional elements-->
+                <writer>Written by: Guy Berryman, Jonny Buckland </writer>
+                <writer>Co-written by: Will Champion, Chris Martin, Tim Bergling   </writer>
+                <director>Directed by: Subigya Sunder Shrestha</director>
+                <producer>Produced by: Avicii, Coldplay</producer>
+                <label>Label: Parlophone</label>
+                <releaseDate>Release Date: 
+                    <year>Year: 2014</year>
+                    <month>Month: May </month>
+                    <day>Day: 02 </day>
+                </releaseDate>
+                <duration>Duration: 4:13</duration>
+                <songSummary>
+                        Coldplay is a greatest hits from the Colplay British rock band.
+                </songSummary>
+            </songDescription>
+        </song>
+
+    </songInfo>    <!--closing of song information-->
+
+    <footer> &#169; Morning Space Music Store </footer>
+</musicStore><!--closing of root tag or element-->
+
+
+<!--Information of the music finished-->

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Kiran Khadka (19033683)
+    Date: April 29, 2021
+
+    File: catalog_19033683.dtd
+          This file consists of rules and declarations for content and structure validation of XML file catalog_19033683.xml
+-->
+
+<!ELEMENT musicStore (storeInfo, songInfo+,footer)>
+
+<!ELEMENT storeInfo (storeName,storeAddress,storeContact+,storeWebsite,storeLogo)>
+<!ELEMENT storeName (#PCDATA)>
+<!ELEMENT storeAddress (#PCDATA)>
+<!ELEMENT storeContact (#PCDATA)>
+<!ATTLIST storeContact contactType (primary | secondary) #IMPLIED>
+<!ELEMENT storeWebsite (#PCDATA)> 
+<!ELEMENT storeLogo EMPTY>  <!--declaring dtd for element with empty elementcontent-->
+
+<!ELEMENT songInfo (song)+>
+<!ELEMENT song (imageCover,songName,singer,price,rating,songDescription)> 
+<!ATTLIST song songID CDATA #REQUIRED > <!--attribute songID is required-->
+<!ELEMENT imageCover EMPTY>
+<!ATTLIST imageCover coverID CDATA #REQUIRED>
+<!ELEMENT songName (#PCDATA)>
+<!ELEMENT singer (#PCDATA)>
+<!ATTLIST singer type CDATA #FIXED "single"> <!--attribute is optional but if specified must match to default 'single'-->
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price range (low|mid|high) #REQUIRED> <!--attribute range has choices on low, mid, high-->
+<!ELEMENT rating (#PCDATA)>
+
+<!--album, band, recordist, label, version are optional elements-->
+<!ELEMENT songDescription (genre+,album?,band?,writer+,director,producer,recordist?,label?,version?,releaseDate,duration,songSummary)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+<!ELEMENT band (#PCDATA)>
+<!ELEMENT writer (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT producer (#PCDATA)>
+<!ELEMENT recordist (#PCDATA)>
+<!ELEMENT label (#PCDATA)>
+<!ELEMENT version (#PCDATA)>
+
+<!ELEMENT releaseDate (#PCDATA|year|month|day)*> <!--releaseDate can contain pcdata or any child elements, or cannot contains at all-->
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT duration (#PCDATA)>
+<!ELEMENT songSummary (#PCDATA)>
+
+<!ELEMENT footer (#PCDATA)> 

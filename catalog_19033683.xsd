@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Kiran Khadka (19033683)
+    Date: April 29, 2021
+     
+    File Name: catalog_19033683.xsd
+
+    File Descriptions: This Schema file is based on the Venetian Blind Design.
+                       The layout below, follows the only global declaration for root element, musicStore.
+                       The types referencing can be found as below where necessary.
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="musicStore"> <!--for musicStore root element-->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="storeInfo" type="storeInfoDataType" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="songInfo" type="songInfoDataType" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="footer" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--closing for root element musicStore-->
+
+
+    <xs:complexType name="storeInfoDataType">        <!--for child elements inside storeInfo element-->
+        <xs:sequence>
+            <xs:element name="storeName" type="xs:string"/>
+            <xs:element name="storeAddress" type="xs:string"/>
+            <xs:element name="storeContact" type="contactDataType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="storeWebsite" type="xs:anyURI"/>
+            <xs:element name="storeLogo" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>   
+
+
+    <xs:complexType name="contactDataType">        <!--schema for contact datatype-->
+        <xs:simpleContent>
+            <xs:extension base="xs:string"> <!--for text-->
+                <xs:attribute name="contactType" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>  
+
+
+
+    <xs:complexType name="songInfoDataType">   <!--schema for songInfo elements-->
+        <xs:sequence>
+            <xs:element name="song" type="songDataType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>    
+
+
+    <xs:complexType name="songDataType">       <!--schema for song element-->
+        <xs:sequence>
+            <xs:element name="imageCover" type="imageCoverDataType"/>
+            <xs:element name="songName" type="xs:string"/>
+            <xs:element name="singer" type="singerDataType"/>
+            <xs:element name="price" type="priceDataType"/>
+            <xs:element name="rating" type="xs:string"/>
+            <xs:element name="songDescription" type="songDescriptionDataType"/>
+        </xs:sequence>
+        <xs:attribute name="songID" type="xs:string" use="required"/>
+    </xs:complexType>   
+
+
+    <xs:complexType name="imageCoverDataType">     <!--schema for imageCover element-->
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="coverID" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="singerDataType">       <!--for singer element-->
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="priceDataType">       <!--for price-->
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="range" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+
+    <xs:complexType name="songDescriptionDataType">      <!--for songDescription-->
+        <xs:sequence>
+            <xs:element name="genre" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="album" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="band" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="writer" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="director" type="xs:string"/>
+            <xs:element name="producer" type="xs:string"/>
+            <xs:element name="label" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="version" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="recordist" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="releaseDate" type="releaseDateDataType"/>
+            <xs:element name="duration" type="xs:string"/>
+            <xs:element name="songSummary" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="releaseDateDataType" mixed="true">       <!--for child element referencing of releaseDate-->
+        <xs:sequence>
+            <xs:element name="year" type="xs:string"/>
+            <xs:element name="month" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="day" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
